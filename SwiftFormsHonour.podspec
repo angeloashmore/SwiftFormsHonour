@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-  s.dependency "SwiftForms", "~> 2.0"
+  s.dependency "SwiftForms", "~> 1.0"
   s.dependency "Honour", "~> 0.1"
 end
