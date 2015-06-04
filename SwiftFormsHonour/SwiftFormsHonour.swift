@@ -21,7 +21,7 @@ extension FormDescriptor {
                 if let validatorClosure = row.configuration[FormRowDescriptor.Configuration.ValidatorClosure] as? ValidatorClosure {
                     if let rowValue = row.value as? String {
                         let validator = validatorClosure(row)
-                        let result = validator.asset(rowValue)
+                        let result = validator.assert(rowValue)
 
                         if !result.isValid {
                             return false
