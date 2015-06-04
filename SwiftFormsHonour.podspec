@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SwiftFormsHonour"
-  s.version      = "0.2.0"
+  s.version      = "0.3.0"
   s.summary      = "Integrate powerful string validation into SwiftForms using Honour"
   s.homepage     = "https://github.com/doorbellapp/SwiftFormsHonour"
   s.license      = { :type => "MIT", :file => "LICENSE" }

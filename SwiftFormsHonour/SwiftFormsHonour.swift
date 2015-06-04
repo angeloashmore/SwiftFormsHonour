@@ -8,7 +8,7 @@
 import SwiftForms
 import Honour
 
-public typealias ValidatorClosure = (FormDescriptor, FormRowDescriptor) -> Validator
+public typealias ValidatorClosure = (Void) -> Validator
 
 extension FormRowDescriptor.Configuration {
     public static let ValidatorClosure = "FormRowDescriptorConfigurationValidatorClosure"
@@ -20,8 +20,7 @@ extension FormDescriptor {
             for row in section.rows {
                 if let validatorClosure = row.configuration[FormRowDescriptor.Configuration.ValidatorClosure] as? ValidatorClosure {
                     if let rowValue = row.value as? String {
-                        let validator = validatorClosure(self, row)
-                        let result = validator.assert(rowValue)
+                        let result = validatorClosure().assert(rowValue)
 
                         if !result.isValid {
                             return false
